@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularSample01';
+  isLoggedin:boolean = false;
+  constructor() { }
+
+  CheckAuth() {
+    //TODO auth function
+  
+    return this.isLoggedin;
+  }
 }
