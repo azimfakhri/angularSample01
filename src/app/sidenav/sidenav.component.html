@@ -1,5 +1,5 @@
   <mat-list role="list">
     <mat-list-item *ngFor="let m of menu" [routerLink]="m.url" >
-        {{m.name}}
+      <mat-icon *ngIf="m.url != ''">{{m.icon}}</mat-icon> {{m.name}}
       </mat-list-item>
   </mat-list>

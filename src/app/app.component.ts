@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +10,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angularSample01';
   isLoggedin:boolean = false;
-  constructor() { }
+  constructor(private authService: AuthService,
+    private router:Router) { 
+    router.events.subscribe(val => {
+      this.CheckAuth();
+    });
 
-  CheckAuth() {
-    //TODO auth function
+   
+  }
+
+  async CheckAuth() {
+    this.isLoggedin = await this.authService.isAuthenticated();
   
     return this.isLoggedin;
+  }
+
+  SignOut(){
+    this.authService.SignOut();
   }
 }

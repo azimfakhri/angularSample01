@@ -1,23 +1,29 @@
+@import "../styles.scss";
+
 mat-sidenav-container{
-    height: calc(100vh - 70px);
+    height: calc(100vh - 65px);
 }
 
 mat-sidenav {
-    background-color: #aaa;
-    width: 150px;
-    margin:20px;
-    padding:15px;
-    border-radius:10px;
-    color:#fff;
+    width: 150px;   
+    background-color: $secondary;
 }
 
 mat-sidenav-content{
-    background-color: #fff;
-    height: calc(100vh - 70px);
-    margin:20px 40px;
+    background-color: $background;
+    height: calc(100vh - 65px);
     padding: 15px;
+}
+
+mat-toolbar{
+    background-color: $primary;
+    color:#ffffff;  
 }
 
 .content{
     margin-left:180px !important;
 }
+
+.spacer {
+    flex: 1 1 auto;
+  }

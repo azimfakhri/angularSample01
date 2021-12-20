@@ -1,5 +1,11 @@
 <mat-toolbar *ngIf="isLoggedin">
-    Ordering System
+   <span>Leave System</span>
+   <span class="spacer"></span>
+   <button mat-icon-button aria-label="Sign out"
+          matTooltip="Sign Out" (click)="SignOut()"
+   >
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
 </mat-toolbar>
 <mat-sidenav-container autosize>
     <mat-sidenav mode="side" [opened]="isLoggedin">

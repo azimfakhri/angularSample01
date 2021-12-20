@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Menu } from '../menu';
+import { Menu } from '../model/menu';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,11 +7,9 @@ import { Menu } from '../menu';
   styleUrls: ['./sidenav.component.scss']
 })
 
-
-
 export class SidenavComponent implements OnInit {
   menu:Menu[] = [
-    {name:"Home",url:"home"}
+    {name:"Home",url:"home",icon:"home"}  
   ]
   constructor(
   ) { }
